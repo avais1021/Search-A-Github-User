@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+#main{
+    min-height: 100vh;
+    background: rgb(29, 18, 85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form{
+    width: 100%;
+}
+.searchUser{
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 30px;
+    /* position: relative; */
+}
+.searchUser input{
+    width: 100%;
+    font-size: 16px;
+    padding: 5px;
+    /* color: white; */
+    background: rgb(101 232 232);
+    box-shadow: 4px 4px 4px blue;
+    border-radius: 4px;
+}
+.searchUser input:focus{
+    outline: none;
+}
+.searchUser i{
+    /* position: absolute; */
+    /* top: 25%; */
+    /* right: 5px; */
+    display: block;
+    text-align: center;
+    margin-top: 13px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.card{
+    width: 500px;
+    min-height: 200px ;
+    background: rgb(183, 255, 193);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin: 20px auto 20px auto;
+}
+.card img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.card ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin-top: 5px;
+}
+.card ul strong{
+    margin-left: 5px;
+}
+.card #repos a{
+    text-decoration:none ;
+    color: rgb(74, 74, 196);
+    margin-right: 18px;
+    line-height: 25px;
+    box-shadow: 2px 2px 2px rgb(74, 74, 196);
+    padding-right: 4px;
+    padding-bottom: 2px;
+}
+.card #repos {
+    margin-top: 5px;
+    word-break: break-word;
+}
+.card #repos a:hover{
+    /* text-decoration: underline; */
+    color: red;
+}
+
+.card h2{
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+.card p{
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+@media screen and (max-width : 550px){
+    .card{
+        width: 90%;
+        gap: 15px;
+    }
+    .card ul{
+        flex-wrap: wrap;
+        gap: unset;
+    }
+    .card ul li{
+        margin-right: 10px;
+    }
+    .searchUser{
+        width: 90%;
+    }
+
+    .searchUser input::placeholder{
+        font-size: 15.6px;
+        text-align: center;
+    }
+}
