@@ -79,4 +79,3 @@ searchIcon.addEventListener('click' , function(){
     }
     searchInput.value='';
 })
-

@@ -47,6 +47,26 @@ form{
     cursor: pointer;
 }
 
+.examples{
+    color: white;
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.examples p{
+letter-spacing: 1px;
+cursor: pointer;
+padding: 3px;
+background: #7b7b7b;
+margin-right: 4px;
+margin-bottom: 5px;
+border-radius: 8px;
+}
+.examples p:hover{
+    background: white;
+    color: black;
+}
 .card{
     width: 500px;
     min-height: 200px ;
