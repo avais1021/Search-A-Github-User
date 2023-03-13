@@ -6,7 +6,9 @@ const searchIcon = document.querySelector('#searchIcon');
 const getUser = async (username) => {
     const responce = await fetch(APIURL + username);
     const data = await responce.json();
-    console.log(data)
+    console.log(JSON.stringify(data,null,2))
+    console.log(data.avatar_url,"data.avatar_url");
+    
 
     const card = `
     
@@ -14,11 +16,12 @@ const getUser = async (username) => {
     <div class="card">
 
     <div>
-        <img class="avatar" src="${data.avatar_url}" alt="img">
+  <!--  <img class="avatar" src="${data.avatar_url == "https://avatars.githubusercontent.com/u/89316665?v=4" ? "https://picsum.photos/200" :  data.avatar_url }" alt="img"> -->
+  <img class="avatar" src="${data.avatar_url }" alt="img">
     </div>
     <div class="user-info">
-        <h2>Name:${data.name}</h2>
-        <p>Bio:${data.bio}</p>
+        <h2>Name:${data.name ? data.name : 'N   o Name'}</h2>
+        <p>Bio:${data.bio ? data.bio : "There Is not Bio" }</p>
 
         <ul>
             <li>${data.followers}<strong>Followers</strong></li>

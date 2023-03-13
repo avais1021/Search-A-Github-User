@@ -73,9 +73,10 @@ border-radius: 8px;
     background: rgb(183, 255, 193);
     color: black;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 45px;
+    /* align-items: center; */
+    gap: 15px;
     padding: 10px 15px;
     border-radius: 15px;
     margin: 20px auto 20px auto;
@@ -97,11 +98,12 @@ border-radius: 8px;
 .card #repos a{
     text-decoration:none ;
     color: rgb(74, 74, 196);
-    margin-right: 18px;
     line-height: 25px;
     box-shadow: 2px 2px 2px rgb(74, 74, 196);
     padding-right: 4px;
     padding-bottom: 2px;
+    display: block;
+    margin-top: 11px;
 }
 .card #repos {
     margin-top: 5px;
@@ -123,6 +125,9 @@ border-radius: 8px;
 }
 
 @media screen and (max-width : 550px){
+    .cardPar{
+        width: 100%;
+    }
     .card{
         width: 90%;
         gap: 15px;
